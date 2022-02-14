@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Show</title>
+</head>
+<body>
+    <button onclick="ShowInfor()">Show Information</button>
+    <div id="show"></div>
+        <script>
+            function ShowInfor() {
+                document.getElementById('show').innerHTML=`
+                <form>
+                    <p>
+                        <label>Tên</label>
+                        <input type="text" id="name" disabled>
+                    </p>
+                    <p>
+                        <label>Tuổi:</label>
+                        <input type="number" id="age" disabled>
+                    </p>
+                    <p>
+                        <label>Email:</label>
+                        <input type="email" id="email" disabled>
+                    </p>
+                </form>
+                `
+                document.getElementById('name').value=localStorage.getItem('name_db')
+                document.getElementById('age').value=localStorage.getItem('age_db')
+                document.getElementById('email').value=localStorage.getItem('email_db')
+            }
+        </script>
+</body>
+</html>
